@@ -1,0 +1,152 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_deli"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    tools:context=".AddOrDetailDPersonActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_add_food"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginTop="@dimen/four_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/four_dp"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_dname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="Delivery person's Name"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/four_dp"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_demail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="Email Id"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/four_dp"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_dcontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="Contact number"
+                android:inputType="phone"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>
+        <!--latlng, city, pincode, status;-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/four_dp"
+            android:layout_marginBottom="@dimen/four_dp"
+            android:fontFamily="@font/raleway"
+            android:paddingLeft="@dimen/four_dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:paddingRight="@dimen/eight_dp"
+            android:text=" Delivers in Area:"
+            android:textColor="@color/dark_green" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/four_dp"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_dcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="Delivers in City"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/four_dp"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_dpincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="Pincode area"
+                android:inputType="text"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--<android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/four_dp"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_dstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:hint="status"
+                android:inputType="phone"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>-->
+
+        <Button
+            android:id="@+id/btn_update_orsubmit"
+            style="@style/BtnTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/four_dp"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:layout_marginEnd="@dimen/four_dp"
+            android:layout_marginBottom="@dimen/four_dp"
+            android:onClick="onUpdateClicked"
+            android:text="update" />
+    </LinearLayout>
+</ScrollView>

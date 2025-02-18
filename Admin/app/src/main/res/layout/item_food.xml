@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/four_dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/twodp"
+        app:cardElevation="@dimen/four_dp"
+        app:cardMaxElevation="2dp">
+        <!--//Fid,Name,Cat,Desc,Price,Status,img-->
+        <RelativeLayout
+            android:id="@+id/rl_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_border_red"
+            android:padding="@dimen/four_dp">
+
+            <ImageView
+                android:padding="@dimen/four_dp"
+                android:layout_margin="@dimen/four_dp"
+                android:id="@+id/iv_menu"
+                style="@style/TextCustom"
+                android:background="@drawable/edittext_back_light"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+
+            <TextView
+                android:id="@+id/tv_bname"
+                style="@style/TextCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/four_dp"
+                android:layout_toRightOf="@id/iv_menu"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="name"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tv_fdesc"
+                style="@style/TextCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_menu"
+                android:ellipsize="end"
+                android:text="descrip" />
+
+            <TextView
+                android:id="@+id/tv_categ"
+                style="@style/TextCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_fdesc"
+                android:ellipsize="end"
+                android:text="@string/category" />
+
+            <TextView
+                android:id="@+id/tv_status_menu"
+                style="@style/TextCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_categ"
+                android:ellipsize="end"
+                android:text="status" />
+            <TextView
+                android:id="@+id/tv_type_menu"
+                style="@style/TextCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_status_menu"
+                android:ellipsize="end"
+                android:text="veg nonveg" />
+            <TextView
+                android:id="@+id/tv_fprice"
+                style="@style/TextCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_type_menu"
+                android:text="@string/price" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

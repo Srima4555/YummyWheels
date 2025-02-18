@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical"
+    tools:context="com.website.yummywheels.fragment.RestauFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/spn_vieworder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/four_dp"
+            android:layout_marginBottom="@dimen/four_dp"
+            android:padding="@dimen/four_dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:background="@drawable/edittext_back_light"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textColorHint="@color/dark_green">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:drawableLeft="@android:drawable/ic_menu_search"
+                    android:drawablePadding="@dimen/four_dp"
+                    android:fontFamily="monospace"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/dark_green" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_search"
+                style="@style/BtnTheme"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/four_dp"
+                android:layout_weight="1"
+                android:padding="@dimen/four_dp"
+                android:text="Search" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/four_dp"
+        android:fontFamily="monospace"
+        android:padding="@dimen/eight_dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="Restaurants found."
+        android:textColor="@color/light_grey" />
+    <ListView
+
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+        android:padding="@dimen/four_dp" />
+
+</LinearLayout>

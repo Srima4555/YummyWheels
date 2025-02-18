@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_usrs"
+            android:icon="@drawable/person"
+            android:title="View Users" />
+        <item
+            android:id="@+id/nav_restau"
+            android:icon="@drawable/restau"
+            android:title="Restaurant" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/order"
+            android:title="View Orders" />
+        <item
+            android:id="@+id/nav_delivery"
+            android:icon="@drawable/delivery_person"
+            android:title="Delivery Person" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/power"
+            android:title="Logout" />
+    </group>
+</menu>

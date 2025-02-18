@@ -1,0 +1,531 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddOrDetailRestauActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fortyeight_dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_add_food"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ScrollView
+            android:id="@+id/sv_add_doc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/four_dp"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/four_dp">
+                <!--spinner, lv-->
+                <TextView
+                    android:id="@+id/tv_cuisine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/four_dp"
+                    android:layout_marginBottom="@dimen/four_dp"
+                    android:fontFamily="cursive"
+                    android:padding="@dimen/four_dp"
+                    android:text="Tap to select a cuisine"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <LinearLayout
+                    android:id="@+id/ll_cuisine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_cuisine"
+                    android:background="@drawable/edittext_back_light"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    android:padding="@dimen/eight_dp">
+
+                    <CheckBox
+                        android:id="@+id/cb_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Afghani" />
+
+                    <CheckBox
+                        android:id="@+id/cb_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="American" />
+
+                    <CheckBox
+                        android:id="@+id/cb_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="BBQ" />
+
+                    <CheckBox
+                        android:id="@+id/cb_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="British" />
+
+                    <CheckBox
+                        android:id="@+id/cb_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Cafe" />
+
+                    <CheckBox
+                        android:id="@+id/cb_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Chinese" />
+
+                    <CheckBox
+                        android:id="@+id/cb_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="European" />
+
+                    <CheckBox
+                        android:id="@+id/cb_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="French" />
+
+                    <CheckBox
+                        android:id="@+id/cb_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Indian" />
+
+                    <CheckBox
+                        android:id="@+id/cb_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Italian" />
+
+                    <CheckBox
+                        android:id="@+id/cb_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Korean" />
+
+                    <CheckBox
+                        android:id="@+id/cb_11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Mexican" />
+
+                    <CheckBox
+                        android:id="@+id/cb_12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Other" />
+
+                    <CheckBox
+                        android:id="@+id/cb_13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/eight_dp"
+                        android:fontFamily="cursive"
+                        android:onClick="onCheckboxClicked"
+                        android:text="Spanish" />
+
+                    <!-- <LinearLayout
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content">
+
+                         <Button
+                             android:id="@+id/btn_cancel"
+                             style="@style/BtnTheme"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginRight="@dimen/eight_dp"
+                             android:layout_weight="1"
+                             android:text="cancel" />
+
+                         <Button
+                             android:id="@+id/btn_ok"
+                             style="@style/BtnTheme"
+                             android:layout_width="0dp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="@dimen/eight_dp"
+                             android:layout_weight="1"
+                             android:text="Ok" />
+                     </LinearLayout>-->
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/include_upload"
+                    layout="@layout/rv_upload_included" />
+                <!--rname, contact, address, city, pincode, cuisine, latlng, time, cost, logo, minorder, type, status-->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_rname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_cuisine"
+                    android:layout_toRightOf="@id/include_upload"
+                    android:padding="@dimen/four_dp"
+                    android:textColorHint="@color/dark_green">
+
+                    <EditText
+                        android:id="@+id/et_rname_"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:hint="Restaurant Name"
+                        android:inputType="text"
+                        android:textColor="@color/dark_green" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_rname"
+                    android:layout_toRightOf="@id/include_upload"
+                    android:padding="@dimen/four_dp"
+                    android:textColorHint="@color/dark_green">
+
+                    <EditText
+                        android:id="@+id/et_rtype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:hint="Veg/Non Veg"
+                        android:inputType="text"
+                        android:textColor="@color/dark_green" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_type"
+                    android:padding="@dimen/four_dp"
+                    android:textColorHint="@color/dark_green">
+
+                    <EditText
+                        android:id="@+id/et_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:hint="status"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/dark_green" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_cost"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_status"
+                    android:padding="@dimen/four_dp"
+                    android:textColorHint="@color/dark_green">
+
+                    <EditText
+                        android:id="@+id/et_cost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:hint="cost for 2"
+                        android:inputType="number"
+                        android:textColor="@color/dark_green" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/restau_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_cost"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_time_deliv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_time_deliv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="delivery timings"
+                            android:inputType="text"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <Button
+                        android:id="@+id/btn_from"
+                        android:onClick="onFromClicked"
+                        style="@style/BtnTheme"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="from" />
+
+                    <Button
+                        android:id="@+id/btn_to"
+                        style="@style/BtnTheme"
+                        android:layout_marginLeft="@dimen/four_dp"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_gravity="center"
+                        android:onClick="onFromClicked"
+                        android:layout_height="wrap_content"
+                        android:text="to" />
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_min_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/restau_time"
+                    android:padding="@dimen/four_dp"
+                    android:textColorHint="@color/dark_green">
+
+                    <EditText
+                        android:id="@+id/et_min_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monospace"
+                        android:hint="minimum order for delivery"
+                        android:inputType="text"
+                        android:textColor="@color/dark_green" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_map_marker"
+                    android:layout_margin="@dimen/four_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/til_min_order"
+                    android:background="@drawable/edittext_back_grey">
+
+                    <ImageView
+                        android:id="@+id/iv_marker"
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="0dp"
+                        android:padding="@dimen/twentyfour"
+                        android:src="@drawable/marker" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_add_restau"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_marker"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_add_restau"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="address"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_rcity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_add_restau"
+                        android:layout_toRightOf="@id/iv_marker"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_rcity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="city"
+                            android:inputType="textCapWords"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_rpincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_rcity"
+                        android:layout_toRightOf="@id/iv_marker"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_rpincode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="pincode"
+                            android:inputType="textPostalAddress"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_rcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_rpincode"
+                        android:layout_toRightOf="@id/iv_marker"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_rcontact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="contact"
+                            android:inputType="phone"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ll_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_map_marker">
+
+                    <TextView
+                        android:id="@+id/tv_manger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/four_dp"
+                        android:fontFamily="@font/raleway"
+                        android:padding="@dimen/eight_dp"
+                        android:text="Manager's Details"
+                        android:textColor="@color/dark_green" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_mname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_manger"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_mname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="Manager's Name"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_memail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_mname"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_memail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="Manager's Email Id"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_mcontact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/til_memail"
+                        android:padding="@dimen/four_dp"
+                        android:textColorHint="@color/dark_green">
+
+                        <EditText
+                            android:id="@+id/et_mcontact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:hint="Manager's Contact number"
+                            android:inputType="phone"
+                            android:textColor="@color/dark_green" />
+                    </android.support.design.widget.TextInputLayout>
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btn_update_orsubmit"
+                    style="@style/BtnTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll_manager"
+                    android:layout_margin="@dimen/four_dp"
+                    android:text="submit" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+</android.support.constraint.ConstraintLayout>

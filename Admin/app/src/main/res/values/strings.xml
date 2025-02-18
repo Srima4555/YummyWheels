@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Admin\'s Yummy Wheels</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="dialog_select_prompt">Choose a picture</string>
+    <string name="dialog_select_camera">Camera</string>
+    <string name="dialog_select_gallery">Gallery</string>
+
+    <string name="date_from">Date From</string>
+    <string name="date_to">Date To</string>
+    <string name="total_price">Total price:</string>
+    <string name="order_id">Order id</string>
+    <string name="ordered_on">Ordered on</string>
+    <string name="order_status">Order status:</string>
+    <string name="category">Category:</string>
+    <string name="price">\u20b9 %1$s</string>
+
+    <string name="contact_no_1_s">Contact No. %1$s</string>
+    <string name="pincode_1_s">Pincode: %1$s</string>
+    <string name="title_home">Manager</string>
+    <string name="title_dashboard">Menu</string>
+    <string name="title_notifications">Reviews</string>
+</resources>

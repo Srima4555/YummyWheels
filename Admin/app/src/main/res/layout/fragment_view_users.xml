@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_viewusers"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.ViewUserFragment">
+
+    <ListView
+        android:id="@+id/lv_view_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/splash"
+        android:dividerHeight="1dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_no_records"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:src="@drawable/no_history"
+            />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

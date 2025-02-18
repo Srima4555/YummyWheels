@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_mgr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ManagerActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_add_food"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_mid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/abl"
+        android:padding="@dimen/four_dp"
+        android:textColorHint="@color/dark_green">
+
+        <EditText
+            android:id="@+id/et_mid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:fontFamily="monospace"
+            android:hint="Manager's ID"
+            android:inputType="textPersonName"
+            android:textColor="@color/dark_green" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_mname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_mid"
+        android:padding="@dimen/four_dp"
+        android:textColorHint="@color/dark_green">
+
+        <EditText
+            android:id="@+id/et_mname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:hint="Manager's Name"
+            android:inputType="textPersonName"
+            android:textColor="@color/dark_green" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_memail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_mname"
+        android:padding="@dimen/four_dp"
+        android:textColorHint="@color/dark_green">
+
+        <EditText
+            android:id="@+id/et_memail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:hint="Manager's Email Id"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/dark_green" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_mcontact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_memail"
+        android:padding="@dimen/four_dp"
+        android:textColorHint="@color/dark_green">
+
+        <EditText
+            android:id="@+id/et_mcontact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:hint="Manager's Contact number"
+            android:inputType="phone"
+            android:textColor="@color/dark_green" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_update_orsubmit"
+        style="@style/BtnTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/til_mcontact"
+        android:layout_margin="@dimen/four_dp"
+        android:onClick="onUpdateClicked"
+        android:text="update" />
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_tab"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_datepickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/four_dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/btn_datepick_from"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/four_dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_date"
+            android:text="@string/date_from" />
+
+        <ImageView
+            android:id="@+id/btn_datepick_to"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_margin="@dimen/four_dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_date"
+            android:text="@string/date_to" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_date_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/four_dp"
+        android:paddingRight="@dimen/four_dp"
+        android:paddingBottom="@dimen/eight_dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_date_from"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/four_dp"
+            android:layout_marginRight="@dimen/four_dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Date From:"
+            android:textColor="@color/violetgrey"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_date_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/four_dp"
+            android:layout_marginRight="@dimen/four_dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Date To:"
+            android:textColor="@color/violetgrey"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spn_vieworder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/four_dp"
+        android:layout_marginBottom="@dimen/four_dp"
+        android:padding="@dimen/four_dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginEnd="@dimen/eight_dp"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:weightSum="5"
+        android:background="@drawable/edittext_back_light"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/dark_green">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:drawablePadding="@dimen/four_dp"
+                android:fontFamily="monospace"
+                android:layout_weight="2"
+                android:inputType="textCapWords"
+                android:textColor="@color/dark_green" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/btn_search"
+            android:text="Search"
+            style="@style/BtnTheme"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/four_dp"
+            android:layout_width="0dp"
+            android:padding="@dimen/four_dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/four_dp"
+        android:fontFamily="monospace"
+        android:padding="@dimen/eight_dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="Orders found."
+        android:textColor="@color/light_grey" />
+    <ListView
+        android:id="@+id/lv_tab"
+        android:background="@drawable/edittext_back_grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/four_dp"
+        android:divider="@color/light_grey"
+        android:dividerHeight="1dp"
+        android:padding="2dp"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_no_history"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/eight_dp"
+            android:src="@drawable/no_history"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
