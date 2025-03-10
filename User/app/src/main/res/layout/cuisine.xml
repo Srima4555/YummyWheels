@@ -1,0 +1,472 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/indian"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+                    <TableRow
+                        android:background="@drawable/indian"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Indian"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/afgani"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/afghani"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Afghani"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/american"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/american"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="American"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/bbq"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/bbq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="BBQ"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/british"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+                    <TableRow
+                        android:background="@drawable/british"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="British"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cafe"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/cafe"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Cafe"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/chinese"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+                    <TableRow
+                        android:background="@drawable/chinese"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Chinese"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/european"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/european"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="European"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/french"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+                    <TableRow
+                        android:background="@drawable/french"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="French"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/italian"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/italian"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Italian"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/korean"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+                    <TableRow
+                        android:background="@drawable/korean"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Korean"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/mexican"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/mexican"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Mexican"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/spanish"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+                    <TableRow
+                        android:background="@drawable/spanish"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Spanish"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/others"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="150dp">
+
+                    <TableRow
+                        android:background="@drawable/others"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:textColor="@color/white"
+                            android:background="@color/cardback"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:typeface="serif"
+                            android:textStyle="bold"
+                            android:text="Others"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent" />
+
+
+                    </TableRow>
+
+                </android.support.v7.widget.CardView>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

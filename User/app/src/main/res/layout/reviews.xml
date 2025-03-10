@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/Rlist"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:dividerHeight="5dp"
+            android:divider="@android:color/transparent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_height="0dp"/>
+
+        <TableLayout
+            android:id="@+id/tbreview"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+
+            <TextView
+                android:background="@color/red"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <RelativeLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RatingBar
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rratingbar"
+                    android:numStars="5"
+                    android:stepSize="0.1"
+                    style="?android:attr/ratingBarStyle" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/rreview"
+                android:padding="5dp"
+                android:gravity="start"
+                android:hint="Review"
+                android:background="@drawable/edittext_back"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <Button
+                android:id="@+id/rsubmit"
+                android:layout_marginTop="10dp"
+                android:text="Submit"
+                android:background="@color/red"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </TableLayout>
+
+    </TableLayout>
+
+    <TableRow
+        android:gravity="center|right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:gravity="right"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:background="@drawable/backcircle"
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:id="@+id/google"
+                    android:src="@drawable/google"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_marginTop="20dp"
+                android:background="@drawable/backcircle"
+                android:layout_width="60dp"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:id="@+id/yelp"
+                    android:src="@drawable/yelp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </TableRow>
+
+</RelativeLayout>

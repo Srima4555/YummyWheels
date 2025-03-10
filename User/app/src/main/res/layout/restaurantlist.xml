@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/back"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/grid"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </GridView>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/tbnorest"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/nobook"
+                android:src="@drawable/uicon"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <TextView
+                android:padding="2dp"
+                android:background="@color/Wtrans"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/nobook"
+                android:text="No Restaurants"
+                android:textColor="@color/black"
+                android:typeface="serif"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+

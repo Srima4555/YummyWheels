@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/nicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/nicon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+
+        <activity android:name="com.fooddelivery.user.Activity.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.Activity.Register">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.Activity.PlaceSelection">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.Activity.MainActivity">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.restaurant.RestaurantList"
+            android:theme="@style/RestTheme">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.restaurant.RestaurantDetails"
+            android:theme="@style/RestTheme">
+        </activity>
+
+        <activity
+            android:name=".orders.OrderDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.fooddelivery.user.MapActivity">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.restaurant.Reviews">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.restaurant.Menus">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.restaurant.Cart">
+        </activity>
+
+        <activity android:name="com.fooddelivery.user.restaurant.Payment"
+            android:windowSoftInputMode="stateHidden">
+        </activity>
+
+        <service android:name="com.fooddelivery.user.Backgroundservice"/>
+
+        <receiver
+            android:name="com.fooddelivery.user.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAW0TtwylcTDhpGmV9jyw0e-_hMjTioUvs" />
+
+    </application>
+
+</manifest>

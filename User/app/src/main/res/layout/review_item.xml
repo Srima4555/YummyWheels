@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:background="@drawable/edittext_back"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/rname"
+                android:text="Rovel Pinto"
+                android:layout_width="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="wrap_content" />
+
+            <TableRow
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:id="@+id/rdate"
+                    android:text="2017/12/13 12:00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </TableRow>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/rreviewtext"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:text="Excellent Restaurant, Good Quality food."
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_height="wrap_content" />
+
+
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rratingbar"
+                android:layout_weight="1"
+                android:numStars="5"
+                android:stepSize="0.1"
+                style="?android:attr/ratingBarStyleSmall"
+                android:isIndicator="true"/>
+
+            <TextView
+                android:id="@+id/rratingtext"
+                android:layout_marginLeft="10dp"
+                android:text="3.5"
+                android:layout_toRightOf="@id/rratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </TableLayout>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Yummy Wheels</string>
+    <!--<string name="app_name">Easy Eats And Fills</string>-->
+    <string name="pricesymbol">£</string>
+    <string name="rupee">£</string>
+    <string name="order_id">#Order ID: %1$s</string>
+    <string name="total_price">Total price: \u20b9 %1$s</string>
+    <string name="totalrupees">Total \u20b9 %1$s</string>
+    <string name="order_id_1_s">Order #id: %1$s</string>
+    <string name="total_price_1_s">Total price %1$s</string>
+    <string name="restaurant_name_1_s">Restaurant Name: %1$s</string>
+    <string name="restaurant_cont_1_s">Contact: %1$s</string>
+    <string name="delivery_address_1_s">Delivery Address: %1$s</string>
+    <string name="contact_1_s">Contact: %1$s</string>
+    <string name="order_status_1_s">Order Status: %1$s</string>
+    <string name="delivery_assigned_to_1_s">Delivery Assigned to : %1$s</string>
+    <string name="time_of_order_1_s">Time of order: %1$s</string>
+    <string name="food_id">#Food Id:</string>
+    <string name="qty">Qty:</string>
+    <string name="orrderintransac_id">#Order ID: %1$s</string>
+    <string name="amount_paid_u20b9">Amount paid: ₹ %1$s</string>
+    <string name="category">Category:</string>
+    <string name="price">\u20b9 %1$s</string>
+</resources>
