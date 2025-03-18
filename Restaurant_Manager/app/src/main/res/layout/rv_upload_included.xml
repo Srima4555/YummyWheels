@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="@dimen/eight_dp"
+    android:layout_below="@id/ll_cuisine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_upload"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="@dimen/four_dp"
+        android:background="@drawable/frame_back_white"
+        android:contentDescription="upload docs"
+        android:scaleType="fitCenter"
+        android:padding="16dp"
+        android:src="@drawable/insert_photo" />
+
+    <ImageView
+        android:id="@+id/iv_icon_corner"
+        android:layout_width="30dp"
+        android:background="@color/light_grey"
+        android:layout_height="30dp"
+        android:onClick="onFileSelectClicked"
+        android:src="@drawable/add_box"
+        android:layout_marginLeft="80dp" />
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_orders"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/four_dp"
+                android:layout_marginEnd="@dimen/four_dp"
+                android:background="@drawable/edittext_back1"
+                android:contentDescription="transaction"
+                android:onClick="onIconClicked"
+                android:paddingLeft="@dimen/eight_dp"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/four_dp"
+                android:paddingRight="@dimen/eight_dp"
+                android:src="@drawable/ic_order" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Orders"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+           <!-- <View
+                android:background="@color/opaque"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>-->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_restau"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/four_dp"
+                android:background="@drawable/edittext_back_deep"
+                android:contentDescription="my restaurant"
+                android:onClick="onIconClicked"
+                android:paddingLeft="@dimen/eight_dp"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/four_dp"
+                android:paddingRight="@dimen/eight_dp"
+                android:src="@drawable/store" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Restaurant"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/four_dp"
+                android:background="@drawable/edittext_back_deep"
+                android:contentDescription="menu"
+                android:onClick="onIconClicked"
+                android:paddingLeft="@dimen/eight_dp"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/four_dp"
+                android:paddingRight="@dimen/eight_dp"
+                android:src="@drawable/menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Menu"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_rating"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/four_dp"
+                android:background="@drawable/edittext_back_deep"
+                android:contentDescription="review"
+                android:onClick="onIconClicked"
+                android:paddingLeft="@dimen/eight_dp"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/four_dp"
+                android:paddingRight="@dimen/eight_dp"
+                android:src="@drawable/reviewrating" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Reviews"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_transaction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/four_dp"
+                android:background="@drawable/edittext_back_deep"
+                android:contentDescription="transaction"
+                android:onClick="onIconClicked"
+                android:paddingLeft="@dimen/eight_dp"
+                android:paddingTop="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/four_dp"
+                android:paddingRight="@dimen/eight_dp"
+                android:src="@drawable/credit_card" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Transaction"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/colorPrimary" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitie" />
+
+</LinearLayout>

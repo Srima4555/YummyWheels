@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/edittext_back_light"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/four_dp">
+
+    <TextView
+        android:id="@+id/tv_r_id"
+        style="@style/TextCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="#RID"
+        tools:fontFamily="@font/raleway" />
+
+    <TextView
+        android:id="@+id/tv_name_review"
+        style="@style/TextCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_r_id"
+        android:ellipsize="end"
+        android:fontFamily="@font/raleway"
+        android:padding="@dimen/four_dp"
+        android:text="Name"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/tv_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name_review"
+        android:padding="@dimen/four_dp"
+        android:text="email@gmail.com"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey" />
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_rating"
+        android:fontFamily="cursive"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:text="review123"
+        android:textSize="18sp"
+        android:textColor="@color/grey" />
+    <TextView
+        android:id="@+id/tv_timedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_review"
+        android:padding="@dimen/four_dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey" />
+</RelativeLayout>

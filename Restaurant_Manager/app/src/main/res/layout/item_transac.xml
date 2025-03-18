@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/edittext_back_grey"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/four_dp">
+
+    <TextView
+        android:id="@+id/tv_name_review"
+        style="@style/TextCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/raleway"
+        android:padding="@dimen/four_dp"
+        android:text="Name"
+        android:textAllCaps="true" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name_review"
+        android:padding="@dimen/four_dp"
+        android:text="@string/payment_type_1_"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey" />
+    <TextView
+        android:id="@+id/tv_paid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_type"
+        android:fontFamily="@font/raleway"
+        android:layout_alignParentEnd="true"
+        android:padding="@dimen/eight_dp"
+        android:text="@string/amount_paid_u20b9"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:textColor="@color/grey" />
+    <TextView
+        android:id="@+id/tv_timedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_paid"
+        android:padding="@dimen/four_dp"
+        android:text="@string/transaction_successfully_done_on_1_s_2_s"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey" />
+</RelativeLayout>

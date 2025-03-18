@@ -1,0 +1,178 @@
+package com.managerestaurant;
+
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.managerestaurant.UtilConstants;
+import com.managerestaurant.UserPref;
+import com.managerestaurant.JSONParse;
+import com.managerestaurant.RestAPI;
+import com.managerestaurant.R;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+
+import static android.content.ContentValues.TAG;
+
+public class Booking_current extends Fragment {
+
+    RelativeLayout nobook;
+    ListView list;
+    Dialog cd;
+    private ArrayList<com.managerestaurant.BookingPojo> bookingPojos;
+    private com.managerestaurant.OrderAdap orderAdap;
+    private String src = "current", date;
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.booking_each_layout, container, false);
+
+        nobook = (RelativeLayout) v.findViewById(R.id.tbnobook);
+        list = (ListView) v.findViewById(R.id.Blist);
+        bookingPojos = new ArrayList<>();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        date = sdf.format(new Date().getTime());
+        return v;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        new getlist().execute(UserPref.getRid(getActivity()), src, date);
+        Log.i(TAG, "onCreateView: current " + UserPref.getRid(getActivity()) + src + date);
+    }
+
+    public void dailog() {
+        cd = new Dialog(getActivity(), R.style.AppTheme);
+        cd.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        cd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        cd.setContentView(R.layout.loading);
+        cd.setCancelable(false);
+        cd.show();
+    }
+
+    private class getlist extends AsyncTask<String, JSONObject, String> {
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            dailog();
+        }
+
+        @Override
+        protected String doInBackground(String... params) {
+            String a = "back";
+            RestAPI api = new RestAPI();
+            try {
+                JSONObject json = api.MgetOrders(params[0], params[1], params[2]);
+                //JSONObject json = api.MgetOrders(params[0], params[1], "2019/05/10");
+                JSONParse jp = new JSONParse();
+                a = jp.parse(json);
+            } catch (Exception e) {
+                a = e.getMessage();
+            }
+            return a;
+        }
+
+        @Override
+        protected void onPostExecute(String s) {
+            Log.d("reply", s);
+            super.onPostExecute(s);
+            cd.cancel();
+
+            if (s.contains("Unable to resolve host")) {
+                AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
+                ad.setTitle("Unable to Connect!");
+                ad.setMessage("Check your Internet Connection,Unable to connect the Server");
+                ad.setNeutralButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                ad.show();
+            } else {
+                try {
+                    JSONObject json = new JSONObject(s);
+                    String ans = json.getString("status");
+                    if (ans.compareTo("no") == 0) {
+                        list.setAdapter(null);
+                        nobook.setVisibility(View.VISIBLE);
+                        list.setAdapter(null);
+                    } else if (ans.compareTo("ok") == 0) {
+                        if (bookingPojos.size() > 0)
+                            bookingPojos.clear();
+                        com.managerestaurant.BookingPojo pojo;
+                        ArrayList<com.managerestaurant.BookingPojo> listPojo;
+                        JSONArray jarry = json.getJSONArray("Data");
+                        for (int j = 0; j < jarry.length(); j++) {
+                            JSONObject object = jarry.getJSONObject(j);
+                            pojo = new com.managerestaurant.BookingPojo
+                                    (object.getString("Oid"),
+                                            object.getString("TPrice"), object.getString("Rid"),
+                                            object.getString("Uid"), object.getString("Add"), object.getString("City"),
+                                            object.getString("Pincode"), object.getString("Latlng"), object.getString("Phone"),
+                                            object.getString("Odate"), object.getString("Otime"), object.getString("Ddate"),
+                                            object.getString("Status"), object.getString("Payment"), object.getString("Did"),
+                                            object.getString("Uname"));
+                            Log.d(TAG, jarry.length() + " : main arr");
+                            listPojo = new ArrayList<com.managerestaurant.BookingPojo>();
+                            JSONArray jarr = object.getJSONArray("Data");
+                            for (int i = 0; i < jarr.length(); i++) {
+                                JSONObject jobj = jarr.getJSONObject(i);
+                                listPojo.add(new com.managerestaurant.BookingPojo(jobj.getString("data0"),
+                                        jobj.getString("data1"),
+                                        jobj.getString("data2"),
+                                        jobj.getString("data3")));
+                            }
+                            pojo.setBookingPojos(listPojo);
+                            bookingPojos.add(pojo);
+                        }
+                        setLV();
+                    } else if (ans.compareTo("error") == 0) {
+                        String error = json.getString("Data");
+                        Toast.makeText(getActivity(), error, Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(getActivity(), ans, Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception e) {
+                    Toast.makeText(getActivity(), "catch - " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        }
+    }
+
+    private void setLV() {
+        orderAdap = new com.managerestaurant.OrderAdap(getContext(), bookingPojos, this);
+        list.setAdapter(orderAdap);
+        nobook.setVisibility(View.GONE);
+        list.setVisibility(View.VISIBLE);
+    }
+
+    public void openOrderDetailActivity(com.managerestaurant.BookingPojo bookingPojo) {
+        Intent intentDetail = new Intent(getContext(), com.managerestaurant.OrderDetailActivity.class);
+        intentDetail.putExtra(UtilConstants.ORDER_KEY, bookingPojo);
+        intentDetail.putExtra(UtilConstants.FROM_CURRENT_TAB, true);
+        startActivity(intentDetail);
+    }
+}

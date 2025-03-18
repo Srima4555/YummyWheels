@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/four_dp" >
+
+    <TextView
+        android:id="@+id/tv_tid"
+        android:layout_width="wrap_content"
+        style="@style/TextCustom"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/four_dp"
+        android:text="# did" />
+    <TextView
+        android:id="@+id/tv_tname"
+        android:layout_width="wrap_content"
+        style="@style/TextCustom"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textAllCaps="true"
+        android:layout_toRightOf="@id/tv_tid"
+        android:padding="@dimen/four_dp"
+        android:text="name" />
+    <TextView
+        android:id="@+id/tv_contact"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_email"
+        android:fontFamily="serif-monospace"
+        style="@style/TextCustom"
+        android:padding="@dimen/four_dp"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_no_1_s" />
+    <TextView
+        android:id="@+id/tv_email"
+        android:padding="@dimen/four_dp"
+        android:layout_below="@id/tv_tid"
+        android:layout_width="wrap_content"
+        style="@style/TextCustom"
+        android:fontFamily="serif-monospace"
+        android:layout_marginRight="@dimen/twentyfour"
+        android:layout_height="wrap_content"
+        android:text="email" />
+    <TextView
+        android:id="@+id/tv_dist"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/tv_tid"
+        android:layout_alignParentRight="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:padding="@dimen/four_dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_back_grey_thin"
+        android:text="STATUS" />
+
+</RelativeLayout>
