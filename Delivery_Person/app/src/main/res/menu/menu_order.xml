@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mi_status"
+        android:icon="@drawable/status_on"
+        android:title="status"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mi_profile"
+        android:icon="@drawable/person_white"
+        android:title="Profile"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/mi_logout"
+        android:icon="@drawable/power"
+        android:title="Logout"
+        app:showAsAction="ifRoom" />
+
+</menu>

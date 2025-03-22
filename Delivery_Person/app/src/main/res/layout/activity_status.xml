@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".StatusActivity">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/abl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_add_order"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/iv_status"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/edittext_oval"
+        android:onClick="onStatusChangeClicked"
+        android:padding="@dimen/eight_dp"
+        android:src="@drawable/bike_idle" />
+
+    <TextView
+        android:id="@+id/tv_click_tochange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_chnagestatus"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="Click to update"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tv_chnagestatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_status"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:padding="@dimen/eight_dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="bold"
+        android:text="Current status : I'm NOT AVAILABLE for deliveries"
+        android:textColor="@color/whitie" />
+    <Button
+        android:id="@+id/btn_proceed"
+        android:onClick="onProceedClicked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:background="@drawable/frame_border_red"
+        android:text="proceed"
+        android:textColor="@color/colorPrimary" />
+
+</RelativeLayout>

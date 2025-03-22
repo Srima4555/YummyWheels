@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:scrollbars="none"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/Blist"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/tbnobook"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/nobook"
+            android:src="@drawable/no_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:padding="2dp"
+            android:background="@color/Wtrans"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/nobook"
+            android:text="No Orders/Bookings"
+            android:textColor="@color/black"
+            android:typeface="serif"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

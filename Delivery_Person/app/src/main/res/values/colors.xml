@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7E0B1C</color>
+    <color name="colorPrimaryDark">#640D19</color>
+    <color name="colorAccent">#d9206a</color>
+    <color name="fluorescent_red">#d9206a</color>
+    <color name="register_red">#d9206a</color>
+    <color name="red_btn">#a62145</color>
+    <color name="deep_red">#8f1d2d</color>
+    <color name="light_red">#ff7376</color>
+    <color name="lightest_red">#fae0e0</color>
+
+    <color name="rose">#FF4081</color>
+    <color name="pastel_magenta">#EF9DC5</color>
+    <color name="dark_green">#244637</color>
+    <color name="dirty_green">#456015</color>
+    <color name="teal">#0B5A67</color>
+    <color name="violet">#9400D3</color>
+    <color name="dark_blue">#383281</color>
+    <color name="indigo">#4B0082</color>
+    <color name="blue">#0000FF</color>
+    <color name="green">#5cee36</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="orange">#FF7F00</color>
+    <color name="red">#FF0000</color>
+    <color name="card5_bg">#ef075c</color>
+
+    <color name="card1_bg">#f78507</color>
+    <color name="card2_bg">#244637</color>
+    <color name="card3_bg">#c056d9</color>
+    <color name="card4_bg">#967754</color>
+    <color name="card6_bg">#22adf5</color>
+
+    <color name="card7_bg">#00FF00</color>
+    <color name="whitie">#ffffff</color>
+    <color name="splash">#F3F3F3</color>
+    <color name="light_grey">#FF9E9EA1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="opaque">#327A7B7B</color>
+    <color name="opaque_deep">#AE7A7B7B</color>
+    <color name="grey">#585858</color>
+    <color name="violetgrey">#FF56485C</color>
+    <color name="dgrey">#FF56485C</color>
+    <color name="black">#000000</color>
+    <color name="Dblue">#2b2941</color>
+    <color name="Wtrans">#64ffffff</color>
+    <color name="cardback">#53000000</color>
+</resources>

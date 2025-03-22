@@ -1,0 +1,170 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_add_order"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/sv_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/four_dp"
+            android:orientation="vertical"
+            android:padding="@dimen/four_dp">
+
+            <TextView
+                android:id="@+id/tv_oid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="order_id"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <TextView
+                android:id="@+id/tv_tot_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="total_price"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <TextView
+                android:id="@+id/tv_restau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="restaurant_name"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <!--lv-->
+            <ListView
+                android:id="@+id/list_orders"
+                android:nestedScrollingEnabled="true"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="@dimen/eight_dp"
+                android:background="@drawable/edittext_back_grey"
+                android:divider="@color/cardback"
+                android:dividerHeight="1dp"
+                android:padding="@dimen/four_dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="@dimen/eight_dp"
+                android:text="Delivery Details: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/deep_red" />
+
+            <TextView
+                android:id="@+id/tv_time_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="time of order:"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <TextView
+                android:id="@+id/tv_delivery_assign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:drawableRight="@drawable/map"
+                android:fontFamily="serif"
+                android:text="delivery assigned to:"
+                android:onClick="onMarkerClicked"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="order status"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/deep_red" />
+
+            <TextView
+                android:id="@+id/tv_dcontact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="contact"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="serif"
+                android:text="delivery address"
+                android:padding="@dimen/eight_dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/dgrey" />
+
+            <TextView
+                android:id="@+id/tv_change_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:padding="@dimen/eight_dp"
+                android:text="Change order"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/deep_red" />
+
+            <Spinner
+                android:id="@+id/spn_change_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/four_dp"
+                android:layout_marginBottom="@dimen/four_dp"
+                android:padding="@dimen/four_dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
